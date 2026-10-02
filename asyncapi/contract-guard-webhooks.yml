@@ -1,0 +1,21 @@
+generated: '2026-10-02'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.railway.com/observability/webhooks
+sources:
+- https://docs.railway.com/observability/webhooks
+description: Webhooks can be used to receive notifications for a variety of events on the Railway platform.
+events:
+- event: Deployment status changes
+  description: Sent when any service's deployment status changes (e.g., "Deployment.failed").
+- event: Volume usage alerts
+  description: Sent when a volume approaches its capacity limit.
+- event: CPU/RAM monitor alerts
+  description: Sent when resource usage exceeds defined thresholds.
+delivery:
+  auth: No cryptographic signature; verification is done via optional custom headers (e.g., Authorization or X-Webhook-Secret) that the user can
+    configure.
+  retries: Failed deliveries are retried up to 3 times with exponential backoff; a delivery succeeds on any 2xx or 3xx response.
+  content_type: application/json (default HTTP POST payload).
+note: Delivery is best‑effort, not ordered, and persistent failures (100 failures in 6 hours) cause a 24‑hour pause.
+docs: https://docs.railway.com/observability/webhooks

@@ -1,0 +1,43 @@
+generated: '2026-10-02'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/contract-guard-openapi.json
+format: custom
+envelope:
+  media_type: null
+  schema: null
+coverage:
+  operations: 10
+  statuses_declared: 5
+problems:
+- status: 400
+  title: Bad Request
+  description: Invalid schema
+  operations: 1
+  media_types: []
+  schema: null
+- status: 401
+  title: Unauthorized
+  description: Missing/invalid API key
+  operations: 3
+  media_types: []
+  schema: null
+- status: 409
+  title: Conflict
+  description: No billing customer
+  operations: 1
+  media_types: []
+  schema: null
+- status: 429
+  title: Too Many Requests
+  description: Usage limit reached
+  operations: 4
+  media_types: []
+  schema: null
+- status: 503
+  title: Service Unavailable
+  description: Live billing disabled
+  operations: 3
+  media_types: []
+  schema: null

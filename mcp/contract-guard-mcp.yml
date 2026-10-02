@@ -1,0 +1,8 @@
+generated: '2026-10-02'
+method: probed
+source: https://contract-guard-production.up.railway.app/mcp
+deployment:
+  mode: remote
+  endpoint: https://contract-guard-production.up.railway.app/mcp
+  auth: unknown
+  verified: probed

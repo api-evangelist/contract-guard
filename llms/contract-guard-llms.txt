@@ -1,0 +1,24 @@
+# Contract Guard
+
+> Deterministic JSON contract validation for software and AI workflows.
+
+## Canonical
+- Website: https://contract-guard-production.up.railway.app/
+- OpenAPI: https://contract-guard-production.up.railway.app/openapi.json
+- APIs.json: https://contract-guard-production.up.railway.app/apis.json
+- ARD: https://contract-guard-production.up.railway.app/.well-known/ard.json
+- MCP: https://contract-guard-production.up.railway.app/mcp (requires X-API-Key)
+- MCP registry metadata: https://contract-guard-production.up.railway.app/server.json
+- Postman collection: https://contract-guard-production.up.railway.app/postman_collection.json
+- Postman API Network: https://www.postman.com/othepro211-722048/contract-guard-api
+- Health: https://contract-guard-production.up.railway.app/healthz
+- Product registry: https://contract-guard-production.up.railway.app/v1/products
+- Trial status: https://contract-guard-production.up.railway.app/v1/trial-keys/status
+- Billing status: https://contract-guard-production.up.railway.app/v1/billing/status
+- Authenticated account/usage status: GET https://contract-guard-production.up.railway.app/v1/account (requires X-API-Key; does not consume validation quota)
+
+## Product
+Contract Guard validates a JSON payload against caller-supplied JSON Schema. It returns exact violations and can perform conservative, schema-required type normalization when explicitly requested. It does not silently invent missing values or retain raw customer payloads.
+
+## Access
+A public demo is available on the website. Self-service trial API keys are available when the trial status endpoint reports enabled=true. To obtain one, POST /v1/trial-keys?source=mcp-registry with Content-Type: application/json and body {}. Store the returned api_key securely and send it in X-API-Key on MCP initialization and all tool calls. GET on the key-issuance URL is not supported. An unauthenticated MCP 401 is expected. Live charging is only active when the billing status endpoint reports live_charging=true.

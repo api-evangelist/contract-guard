@@ -1,0 +1,98 @@
+generated: '2026-10-02'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.railway.com/cli
+sources:
+- https://docs.railway.com/cli
+- https://docs.railway.com/cli/global-options
+- https://docs.railway.com/cli/deploying
+- https://docs.railway.com/cli/telemetry
+install:
+- method: curl script with agent support (macOS, Linux, Windows via WSL)
+  command: curl -fsSL agents.railway.com | sh
+- method: curl script without agent configuration
+  command: bash <(curl -fsSL railway.com/install.sh)
+- method: Homebrew (macOS)
+  command: brew install railway
+- method: npm (macOS, Linux, Windows)
+  command: npm i -g @railway/cli
+- method: Scoop (Windows)
+  command: scoop install railway
+commands:
+- group: Authentication
+  commands:
+  - railway login
+  - railway login --browserless
+  - railway logout
+  - railway whoami
+- group: Project management
+  commands:
+  - railway init
+  - railway link
+  - railway unlink
+  - railway list
+  - railway status
+  - railway open
+- group: Deployment
+  commands:
+  - railway up
+  - railway up --detach
+  - railway deploy --template postgres
+  - railway redeploy
+  - railway restart
+  - railway down
+  - railway deployment list
+  - railway templates search
+- group: Infrastructure as Code
+  commands:
+  - railway config init
+  - railway config pull
+  - railway config plan
+  - railway config apply
+- group: Services
+  commands:
+  - railway add
+  - railway add --database postgres
+  - railway add --repo user/repo
+  - railway service
+  - railway service files browse /app
+  - railway service files download /app/data.db ./data.db
+  - railway scale
+  - railway delete
+- group: PostgreSQL
+  commands:
+  - railway postgres pitr status
+  - railway postgres ha status
+  - railway postgres pgbouncer status
+  - railway postgres history
+- group: Variables
+  commands:
+  - railway var
+- group: Tracing
+  commands:
+  - railway trace status
+  - railway trace enable
+  - railway trace enable --all
+  - railway trace list --errors
+  - railway trace get <TRACE_ID>
+- group: Networking
+  commands:
+  - railway domain
+  - railway domain example.com
+  - railway domain list
+  - railway domain status example.com
+  - railway cdn status
+  - railway cdn enable
+  - railway cdn purge html
+  - railway waf under-attack status
+  - railway waf under-attack enable
+  - railway outbound-network status
+  - railway outbound-network static-ip enable
+  - railway outbound-network ipv6 enable
+  - railway private-network status
+  - railway tcp-proxy create --port 5432
+- group: Volumes
+  commands:
+  - railway volume
+binary: railway
+docs: https://docs.railway.com/cli

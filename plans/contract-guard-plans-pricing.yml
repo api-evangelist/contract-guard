@@ -1,0 +1,29 @@
+generated: '2026-10-02'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.railway.com/pricing
+sources:
+- https://docs.railway.com/pricing
+- https://docs.railway.com/pricing/plans
+- https://docs.railway.com/pricing/free-trial
+- https://docs.railway.com/pricing/understanding-your-bill
+name: Contract Guard / Autonomous Utility Factory pricing
+audience: business-product
+pricing_basis: flat-platform
+plans:
+- name: Free
+  price_text: $0 / month
+  price: 0
+  description: For running small apps with $1 of free credit per month
+- name: Hobby
+  price_text: $5 / month
+  price: 5
+  description: Personal projects and side hustles
+- name: Pro
+  price_text: $20 / month
+  price: 20
+  description: Production apps and teams
+- name: Enterprise
+  price_text: Custom
+  description: Compliance, SLAs, and dedicated support
+docs: https://docs.railway.com/pricing

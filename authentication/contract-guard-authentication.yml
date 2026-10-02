@@ -1,0 +1,25 @@
+generated: '2026-10-02'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.railway.com/access/multi-factor-authentication
+sources:
+- https://docs.railway.com/access/multi-factor-authentication
+- https://docs.railway.com/integrations/oauth
+- https://docs.railway.com/integrations/oauth/quickstart
+- https://docs.railway.com/integrations/oauth/creating-an-app
+description: Login with Railway uses OAuth 2.0 authorization code flow.
+schemes:
+- type: oauth2
+  name: Login with Railway
+  evidence: Login with Railway allows third-party applications to authenticate users with their Railway account. Built on OAuth 2.0 and OpenID
+    Connect (OIDC)...
+  flows:
+  - authorization_code
+  authorize_url: https://backboard.railway.com/oauth/auth
+  scopes:
+  - openid
+  - email
+  - profile
+  how_to_obtain: Create an OAuth app in your workspace's Developer settings to get a client ID and client secret.
+note: Token endpoint is https://backboard.railway.com/oauth/token as used in the token exchange step.
+docs: https://docs.railway.com/access/multi-factor-authentication

@@ -1,0 +1,1 @@
+{"resource":"https://api.railway.app","authorization_servers":["https://backboard.railway.com"],"scopes_supported":["workspace:member"],"bearer_methods_supported":["header"]}
