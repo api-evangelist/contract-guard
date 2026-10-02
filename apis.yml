@@ -1,0 +1,30 @@
+aid: contract-guard
+name: Contract Guard / Autonomous Utility Factory
+description: 'Contract Guard / Autonomous Utility Factory is a company surfaced via the API Evangelist
+  harvest backlog (source: new-submission) and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/contract-guard/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-02'
+modified: '2026-10-02'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://contract-guard-production.up.railway.app/
+- type: Documentation
+  url: https://contract-guard-production.up.railway.app/openapi.json
+x-submission-notes: 'Deterministic JSON Schema validation API returning exact violations. | Listed on
+  Kin''s call 2026-10-02 despite: Working API but hosted only on a railway.app subdomain with no company
+  or domain behind it; no stable slug basis.'
+x-submission-probe: root 200; apis.json 200 (1 api); OpenAPI 3.1.0 10 paths; llms.txt 200; 404 probe 404
+x-submitted-by: (GitHub issue author) (github, 2026-09-30)
